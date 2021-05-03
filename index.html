@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style> -->
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <h1 class="title">IP Address Tracker</h1>
+        <br />
+        <form class="header-form">
+          <input
+            type="text"
+            name="text-input"
+            id="text-input"
+            placeholder="Search for any IP address domain"
+          />
+          <button class="send" id="send">
+            <i class="fas fa-chevron-right fa-2x"></i>
+          </button>
+        </form>
+        <br />
+      </section>
+
+      <section class="result" data-aos="fade-up" data-aos-duration="3000">
+        <div class="content">
+          <span>ip address</span>
+          <p class="datas" id="data-ip">
+            <img src="images/giphy.gif" height="92" />
+          </p>
+          <p id="text-error" class="none">Address IP Invalide !!!</p>
+        </div>
+        <div class="verticale-bar"></div>
+        <div class="content">
+          <span>location</span>
+          <p class="datas" id="data-loc-reg">
+            <img src="images/giphy.gif" height="92" />
+          </p>
+        </div>
+        <div class="verticale-bar"></div>
+        <div class="content">
+          <span>timezone</span>
+          <p class="datas" id="data-timezone">
+            <img src="images/giphy.gif" height="92" />
+          </p>
+        </div>
+        <div class="verticale-bar"></div>
+        <div class="content">
+          <span>isp</span>
+          <p class="datas" id="data-isp">
+            <img src="images/giphy.gif" height="92" />
+          </p>
+        </div>
+      </section>
+
+      <div
+        id="map"
+        style="
+          position: absolute;
+          top: 250px;
+          bottom: 0;
+          width: 100%;
+          height: 100vh;
+          z-index: -1;
+        "
+      ></div>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
